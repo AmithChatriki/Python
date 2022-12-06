@@ -1,0 +1,21 @@
+s = "12:05:45PM"
+
+def timeconversion():
+	s1 = s[0:2]
+	i1 = int(s1)
+
+	if s[8]=="P":
+		if s[0:2] != "12":
+			i1 = i1 + 12
+
+	if s[8]=="A":
+		if s[0:2] != "12":
+			return (s[0:8])
+		else:
+			return ("00"+s[2:8])
+	else:
+		return (str(i1)+s[2:8])
+		
+res = timeconversion()
+
+print(res)
